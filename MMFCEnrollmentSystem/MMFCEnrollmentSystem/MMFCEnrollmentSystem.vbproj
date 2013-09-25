@@ -1,0 +1,1782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83121A2E-528B-43C0-BCB8-00660C3BF0CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MMFCEnrollmentSystem.My.MyApplication</StartupObject>
+    <RootNamespace>MMFCEnrollmentSystem</RootNamespace>
+    <AssemblyName>MMFCEnrollmentSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>C8829374D91D314A4AABDC27743C4356CF6175D5</ManifestCertificateThumbprint>
+    <ManifestKeyFile>MMFCEnrollmentSystem_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>c:\server\mmfc\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MMFCEnrollmentSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MMFCEnrollmentSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="DevExpress.Data.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\DevExpress.Data.v10.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\DevExpress.Utils.v10.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\DevExpress.XtraNavBar.v10.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\frmConflictStudents.Designer.vb">
+      <DependentUpon>frmConflictStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\frmConflictStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\frmSubjectFusionList.Designer.vb">
+      <DependentUpon>frmSubjectFusionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\frmSubjectFusionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clsListItem.vb" />
+    <Compile Include="Finance\clsStudentLedger.vb" />
+    <Compile Include="clsTool.vb" />
+    <Compile Include="clsTool2.vb" />
+    <Compile Include="clsWhiteForm.vb" />
+    <Compile Include="clsWhiteForm2.vb" />
+    <Compile Include="Reports\crClassCard1.vb">
+      <DependentUpon>crClassCard.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crClassCardBrokenHours.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crClassCardBrokenHours.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crClassList1.vb">
+      <DependentUpon>crClassList.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crClassListBrokenHours.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crClassListBrokenHours.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crCollectionBreakdown1.vb">
+      <DependentUpon>crCollectionBreakdown.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crCollectionBreakdowninPortrait1.vb">
+      <DependentUpon>crCollectionBreakdowninPortrait.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crCollectionBreakdowninPortraitWithCancelledORs1.vb">
+      <DependentUpon>crCollectionBreakdowninPortraitWithCancelledORs.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crCollectionBreakdownWithCancelledORs1.vb">
+      <DependentUpon>crCollectionBreakdownWithCancelledORs.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crCollectionCancelledORs1.vb">
+      <DependentUpon>crCollectionCancelledORs.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crCollegiateGradingSheet1.vb">
+      <DependentUpon>crCollegiateGradingSheet.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crEnroll.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crEnroll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crEnrollmentList1.vb">
+      <DependentUpon>crEnrollmentList.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crEnrollmentList3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crEnrollmentList3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crEnrollmentListExport1.vb">
+      <DependentUpon>crEnrollmentListExport.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crEnrollOLD1.vb">
+      <DependentUpon>crEnrollOLD.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crEvaluationReport1.vb">
+      <DependentUpon>crEvaluationReport.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crEvaluationReportCurriculum1.vb">
+      <DependentUpon>crEvaluationReportCurriculum.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crGradesMailingList1.vb">
+      <DependentUpon>crGradesMailingList.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crPromotionalReport1.vb">
+      <DependentUpon>crPromotionalReport.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crReceipts1.vb">
+      <DependentUpon>crReceipts.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crReceiptsListing1.vb">
+      <DependentUpon>crReceiptsListing.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crReceiptsOLD1.vb">
+      <DependentUpon>crReceiptsOLD.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crReceiptsSystemForm1.vb">
+      <DependentUpon>crReceiptsSystemForm.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crReceivables1.vb">
+      <DependentUpon>crReceivables.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crResourceLoad1.vb">
+      <DependentUpon>crResourceLoad.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crResourceLoadNoTeacher1.vb">
+      <DependentUpon>crResourceLoadNoTeacher.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStatementofAccount1.vb">
+      <DependentUpon>crStatementofAccount.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStatistics1.vb">
+      <DependentUpon>crStatistics.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStudentLedger.vb">
+      <DependentUpon>crStudentLedger.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\crStudentLedgerbyOR.vb">
+      <DependentUpon>crStudentLedgerbyOR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\crStudentLedgerByORUpdatesOnly.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crStudentLedgerByORUpdatesOnly.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStudentLedgerbyOR_Misc2Cols.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crStudentLedgerbyOR_Misc2Cols.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStudentListing1.vb">
+      <DependentUpon>crStudentListing.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStudentPermanentRecord1.vb">
+      <DependentUpon>crStudentPermanentRecord.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStudentPermit1.vb">
+      <DependentUpon>crStudentPermit.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStudentSchedule1.vb">
+      <DependentUpon>crStudentSchedule.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crStudentsCrosstab.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crStudentsCrosstab.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crSubjectLoad1.vb">
+      <DependentUpon>crSubjectLoad.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crSYOffering1.vb">
+      <DependentUpon>crSYOffering.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crSYOfferingByCurriculum.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crSYOfferingByCurriculum.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTeacherLoad1.vb">
+      <DependentUpon>crTeacherLoad.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTeacherLoadExtraHours.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTeacherLoadExtraHours.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTOR1.vb">
+      <DependentUpon>crTOR.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTotalIncome1.vb">
+      <DependentUpon>crTotalIncome.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTotalIncomeExpectedCollectibles1.vb">
+      <DependentUpon>crTotalIncomeExpectedCollectibles.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTotalIncomeHistory1.vb">
+      <DependentUpon>crTotalIncomeHistory.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTotalIncomePerExam1.vb">
+      <DependentUpon>crTotalIncomePerExam.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTotalIncomeSummaryCollection1.vb">
+      <DependentUpon>crTotalIncomeSummaryCollection.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTranscriptOfRecords.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTranscriptOfRecords.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crWhiteForm.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crWhiteForm.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crWhiteFormBrokenHours.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crWhiteFormBrokenHours.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crWhiteFormMiscCharges.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crWhiteFormMiscCharges.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crWhiteFormMiscChargesStudentLedger.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crWhiteFormMiscChargesStudentLedger.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Datasets\dsFinance.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFinance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsReg2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReg2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsReg2.vb">
+      <DependentUpon>dsReg2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsRegistrar.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRegistrar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsRep.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRep.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsSchool.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsSchool.vb">
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsSchool2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSchool2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsSchool2.vb">
+      <DependentUpon>dsSchool2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsSystem.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSystem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdjustments.designer.vb">
+      <DependentUpon>frmAdjustments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdjustments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminPassword.designer.vb">
+      <DependentUpon>frmAdminPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrokenHours.Designer.vb">
+      <DependentUpon>frmBrokenHours.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrokenHours.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChargeSchedule.Designer.vb">
+      <DependentUpon>frmChargeSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChargeSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChargeScheduleSelect.Designer.vb">
+      <DependentUpon>frmChargeScheduleSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChargeScheduleSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassSelect.Designer.vb">
+      <DependentUpon>frmClassSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassSelect2.Designer.vb">
+      <DependentUpon>frmClassSelect2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassSelect2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourse.designer.vb">
+      <DependentUpon>frmCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseSelect.Designer.vb">
+      <DependentUpon>frmCourseSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourseSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseSubjectSelect.Designer.vb">
+      <DependentUpon>frmCourseSubjectSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourseSubjectSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurriculum.Designer.vb">
+      <DependentUpon>frmCurriculum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurriculum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnrollSubjectCharge.designer.vb">
+      <DependentUpon>frmEnrollSubjectCharge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnrollSubjectCharge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradeEnrolled.Designer.vb">
+      <DependentUpon>frmGradeEnrolled.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradeEnrolled.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradeManual.Designer.vb">
+      <DependentUpon>frmGradeManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradeManual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMiscChargesDetails.designer.vb">
+      <DependentUpon>frmMiscChargesDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMiscChargesDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrevSchoolsDet.Designer.vb">
+      <DependentUpon>frmPrevSchoolsDet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrevSchoolsDet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceiptCashinChange.Designer.vb">
+      <DependentUpon>frmReceiptCashinChange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceiptCashinChange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceiptPreview.Designer.vb">
+      <DependentUpon>frmReceiptPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceiptPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceiptsBreakdown.Designer.vb">
+      <DependentUpon>frmReceiptsBreakdown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceiptsBreakdown.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer.Designer.vb">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchoolResources.designer.vb">
+      <DependentUpon>frmSchoolResources.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchoolResources.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchoolResourcesSelect.Designer.vb">
+      <DependentUpon>frmSchoolResourcesSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchoolResourcesSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchoolYear.designer.vb">
+      <DependentUpon>frmSchoolYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchoolYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectExSchool.Designer.vb">
+      <DependentUpon>frmSelectExSchool.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectExSchool.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.vb">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentLedger.Designer.vb">
+      <DependentUpon>frmStudentLedger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentLedger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\frmStudents.designer.vb">
+      <DependentUpon>frmStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\frmStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\frmStudentSelect.Designer.vb">
+      <DependentUpon>frmStudentSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\frmStudentSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\frmSubjects.Designer.vb">
+      <DependentUpon>frmSubjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\frmSubjects.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\frmSubjectsSelect.Designer.vb">
+      <DependentUpon>frmSubjectsSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\frmSubjectsSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\frmSYOffering.designer.vb">
+      <DependentUpon>frmSYOffering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\frmSYOffering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeachers.designer.vb">
+      <DependentUpon>frmTeachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeachersSelect.Designer.vb">
+      <DependentUpon>frmTeachersSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeachersSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrTypes.Designer.vb">
+      <DependentUpon>frmTrTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrTypesSelect.Designer.vb">
+      <DependentUpon>frmTrTypesSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrTypesSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\frmTutorialClassList.Designer.vb">
+      <DependentUpon>frmTutorialClassList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\frmTutorialClassList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWait.Designer.vb">
+      <DependentUpon>frmWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modGlobal.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Stores\StoreSYOfferings.vb" />
+    <Compile Include="uAdjustments.Designer.vb">
+      <DependentUpon>uAdjustments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uAdjustments.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uChargeSchedule.Designer.vb">
+      <DependentUpon>uChargeSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uChargeSchedule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uClassCard.designer.vb">
+      <DependentUpon>uClassCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uClassCard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportMenu\uClassList.Designer.vb">
+      <DependentUpon>uClassList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu\uClassList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCollections.Designer.vb">
+      <DependentUpon>uCollections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCollections.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCollectionsBreakdown.Designer.vb">
+      <DependentUpon>uCollectionsBreakdown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCollectionsBreakdown.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCollegiateGrade.Designer.vb">
+      <DependentUpon>uCollegiateGrade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCollegiateGrade.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCourses.Designer.vb">
+      <DependentUpon>uCourses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCourses.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCurrentSchoolyear.Designer.vb">
+      <DependentUpon>uCurrentSchoolyear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCurrentSchoolyear.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCurriculum.Designer.vb">
+      <DependentUpon>uCurriculum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCurriculum.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportMenu\uEnrollmentList.Designer.vb">
+      <DependentUpon>uEnrollmentList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu\uEnrollmentList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registrar\uEnrollSubject.Designer.vb">
+      <DependentUpon>uEnrollSubject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\uEnrollSubject.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportMenu\uEvaluationReport.Designer.vb">
+      <DependentUpon>uEvaluationReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu\uEvaluationReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registrar\uFinalizeEnrollment.Designer.vb">
+      <DependentUpon>uFinalizeEnrollment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\uFinalizeEnrollment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportMenu\uGradesMailingList.Designer.vb">
+      <DependentUpon>uGradesMailingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu\uGradesMailingList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registrar\uGradesSubjectTeacher.Designer.vb">
+      <DependentUpon>uGradesSubjectTeacher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\uGradesSubjectTeacher.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportMenu\uPromotionalReport.Designer.vb">
+      <DependentUpon>uPromotionalReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu\uPromotionalReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uReceiptCancel.Designer.vb">
+      <DependentUpon>uReceiptCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uReceiptCancel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uReceiptReprint.Designer.vb">
+      <DependentUpon>uReceiptReprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uReceiptReprint.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uReceipts.Designer.vb">
+      <DependentUpon>uReceipts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uReceipts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uReceiptsListing.Designer.vb">
+      <DependentUpon>uReceiptsListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uReceiptsListing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uReceivables.Designer.vb">
+      <DependentUpon>uReceivables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uReceivables.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registrar\uResourceLoad.Designer.vb">
+      <DependentUpon>uResourceLoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\uResourceLoad.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uSchoolYear.Designer.vb">
+      <DependentUpon>uSchoolYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uSchoolYear.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uSchoolResources.Designer.vb">
+      <DependentUpon>uSchoolResources.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uSchoolResources.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uSemester.Designer.vb">
+      <DependentUpon>uSemester.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uSemester.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uGradeTransferee.Designer.vb">
+      <DependentUpon>uGradeTransferee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uGradeTransferee.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uStatementofAccount.Designer.vb">
+      <DependentUpon>uStatementofAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uStatementofAccount.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uStatistics.Designer.vb">
+      <DependentUpon>uStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uStatistics.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uStudentGrades.Designer.vb">
+      <DependentUpon>uStudentGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uStudentGrades.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Finance\uStudentLedger.Designer.vb">
+      <DependentUpon>uStudentLedger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\uStudentLedger.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uStudentPermanentRecord.Designer.vb">
+      <DependentUpon>uStudentPermanentRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uStudentPermanentRecord.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uStudentPermit.Designer.vb">
+      <DependentUpon>uStudentPermit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uStudentPermit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uStudents.Designer.vb">
+      <DependentUpon>uStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uStudents.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uStudentSchedule.Designer.vb">
+      <DependentUpon>uStudentSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uStudentSchedule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportMenu\uStudentsReport.Designer.vb">
+      <DependentUpon>uStudentsReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu\uStudentsReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administration\uSubjects.Designer.vb">
+      <DependentUpon>uSubjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\uSubjects.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uSummary.Designer.vb">
+      <DependentUpon>uSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uSummary.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administration\uSYOffering.Designer.vb">
+      <DependentUpon>uSYOffering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\uSYOffering.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uSyOfferingRep.Designer.vb">
+      <DependentUpon>uSyOfferingRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uSyOfferingRep.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registrar\uTeacherLoad.Designer.vb">
+      <DependentUpon>uTeacherLoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\uTeacherLoad.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uTeachers.Designer.vb">
+      <DependentUpon>uTeachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uTeachers.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uTOR.Designer.vb">
+      <DependentUpon>uTOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uTOR.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uTRTypes.Designer.vb">
+      <DependentUpon>uTRTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uTRTypes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Finance\uTutorial.Designer.vb">
+      <DependentUpon>uTutorial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\uTutorial.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uWhiteForm.Designer.vb">
+      <DependentUpon>uWhiteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uWhiteForm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Administration\frmConflictStudents.resx">
+      <DependentUpon>frmConflictStudents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\frmSubjectFusionList.resx">
+      <DependentUpon>frmSubjectFusionList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crClassCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crClassCard1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crClassCardBrokenHours.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crClassCardBrokenHours.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crClassList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crClassList1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crClassListBrokenHours.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crClassListBrokenHours.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crCollectionBreakdown.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCollectionBreakdown1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crCollectionBreakdowninPortrait.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCollectionBreakdowninPortrait1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crCollectionBreakdowninPortraitWithCancelledORs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCollectionBreakdowninPortraitWithCancelledORs1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crCollectionBreakdownWithCancelledORs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCollectionBreakdownWithCancelledORs1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crCollectionCancelledORs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCollectionCancelledORs1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crCollegiateGradingSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCollegiateGradingSheet1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crEnroll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEnroll.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crEnrollmentList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEnrollmentList1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crEnrollmentList3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEnrollmentList3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crEnrollmentListExport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEnrollmentListExport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crEnrollOLD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEnrollOLD1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crEvaluationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEvaluationReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crEvaluationReportCurriculum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEvaluationReportCurriculum1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crGradesMailingList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crGradesMailingList1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crPromotionalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crPromotionalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crReceipts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReceipts1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crReceiptsListing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReceiptsListing1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crReceiptsOLD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReceiptsOLD1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crReceiptsSystemForm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReceiptsSystemForm1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crReceivables.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReceivables1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crResourceLoad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crResourceLoad1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crResourceLoadNoTeacher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crResourceLoadNoTeacher1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStatementofAccount.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStatementofAccount1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStatistics.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStatistics1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentLedger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentLedger.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentLedgerbyOR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentLedgerbyOR.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentLedgerByORUpdatesOnly.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentLedgerByORUpdatesOnly.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentLedgerbyOR_Misc2Cols.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentLedgerbyOR_Misc2Cols.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentListing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentListing1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentPermanentRecord.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentPermanentRecord1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentPermit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentPermit1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentSchedule.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentSchedule1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crStudentsCrosstab.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crStudentsCrosstab.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crSubjectLoad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSubjectLoad1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crSYOffering.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSYOffering1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crSYOfferingByCurriculum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSYOfferingByCurriculum.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTeacherLoad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTeacherLoad1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTeacherLoadExtraHours.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTeacherLoadExtraHours.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTOR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTOR1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTotalIncome.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTotalIncome1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTotalIncomeExpectedCollectibles.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTotalIncomeExpectedCollectibles1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTotalIncomeHistory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTotalIncomeHistory1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTotalIncomePerExam.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTotalIncomePerExam1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTotalIncomeSummaryCollection.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTotalIncomeSummaryCollection1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTranscriptOfRecords.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTranscriptOfRecords.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crWhiteForm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crWhiteForm.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crWhiteFormBrokenHours.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crWhiteFormBrokenHours.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crWhiteFormMiscCharges.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crWhiteFormMiscCharges.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crWhiteFormMiscChargesStudentLedger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crWhiteFormMiscChargesStudentLedger.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdjustments.resx">
+      <DependentUpon>frmAdjustments.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminPassword.resx">
+      <DependentUpon>frmAdminPassword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrokenHours.resx">
+      <DependentUpon>frmBrokenHours.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChargeSchedule.resx">
+      <DependentUpon>frmChargeSchedule.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChargeScheduleSelect.resx">
+      <DependentUpon>frmChargeScheduleSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassSelect.resx">
+      <DependentUpon>frmClassSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassSelect2.resx">
+      <DependentUpon>frmClassSelect2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourse.resx">
+      <DependentUpon>frmCourse.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourseSelect.resx">
+      <DependentUpon>frmCourseSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourseSubjectSelect.resx">
+      <DependentUpon>frmCourseSubjectSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurriculum.resx">
+      <DependentUpon>frmCurriculum.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnrollSubjectCharge.resx">
+      <DependentUpon>frmEnrollSubjectCharge.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradeEnrolled.resx">
+      <DependentUpon>frmGradeEnrolled.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradeManual.resx">
+      <DependentUpon>frmGradeManual.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMiscChargesDetails.resx">
+      <DependentUpon>frmMiscChargesDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrevSchoolsDet.resx">
+      <DependentUpon>frmPrevSchoolsDet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceiptCashinChange.resx">
+      <DependentUpon>frmReceiptCashinChange.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceiptPreview.resx">
+      <DependentUpon>frmReceiptPreview.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceiptsBreakdown.resx">
+      <DependentUpon>frmReceiptsBreakdown.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchoolResources.resx">
+      <DependentUpon>frmSchoolResources.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchoolResourcesSelect.resx">
+      <DependentUpon>frmSchoolResourcesSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchoolYear.resx">
+      <DependentUpon>frmSchoolYear.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectExSchool.resx">
+      <DependentUpon>frmSelectExSchool.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentLedger.resx">
+      <DependentUpon>frmStudentLedger.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\frmStudents.resx">
+      <DependentUpon>frmStudents.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\frmStudentSelect.resx">
+      <DependentUpon>frmStudentSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\frmSubjects.resx">
+      <DependentUpon>frmSubjects.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\frmSubjectsSelect.resx">
+      <DependentUpon>frmSubjectsSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\frmSYOffering.resx">
+      <DependentUpon>frmSYOffering.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeachers.resx">
+      <DependentUpon>frmTeachers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeachersSelect.resx">
+      <DependentUpon>frmTeachersSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrTypes.resx">
+      <DependentUpon>frmTrTypes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrTypesSelect.resx">
+      <DependentUpon>frmTrTypesSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\frmTutorialClassList.resx">
+      <DependentUpon>frmTutorialClassList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWait.resx">
+      <DependentUpon>frmWait.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uAdjustments.resx">
+      <DependentUpon>uAdjustments.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uChargeSchedule.resx">
+      <DependentUpon>uChargeSchedule.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uClassCard.resx">
+      <DependentUpon>uClassCard.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMenu\uClassList.resx">
+      <DependentUpon>uClassList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCollections.resx">
+      <DependentUpon>uCollections.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCollectionsBreakdown.resx">
+      <DependentUpon>uCollectionsBreakdown.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCollegiateGrade.resx">
+      <DependentUpon>uCollegiateGrade.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCourses.resx">
+      <DependentUpon>uCourses.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCurrentSchoolyear.resx">
+      <DependentUpon>uCurrentSchoolyear.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCurriculum.resx">
+      <DependentUpon>uCurriculum.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMenu\uEnrollmentList.resx">
+      <DependentUpon>uEnrollmentList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\uEnrollSubject.resx">
+      <DependentUpon>uEnrollSubject.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMenu\uEvaluationReport.resx">
+      <DependentUpon>uEvaluationReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\uFinalizeEnrollment.resx">
+      <DependentUpon>uFinalizeEnrollment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMenu\uGradesMailingList.resx">
+      <DependentUpon>uGradesMailingList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\uGradesSubjectTeacher.resx">
+      <DependentUpon>uGradesSubjectTeacher.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMenu\uPromotionalReport.resx">
+      <DependentUpon>uPromotionalReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uReceiptCancel.resx">
+      <DependentUpon>uReceiptCancel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uReceiptReprint.resx">
+      <DependentUpon>uReceiptReprint.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uReceipts.resx">
+      <DependentUpon>uReceipts.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uReceiptsListing.resx">
+      <DependentUpon>uReceiptsListing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uReceivables.resx">
+      <DependentUpon>uReceivables.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\uResourceLoad.resx">
+      <DependentUpon>uResourceLoad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uSchoolYear.resx">
+      <DependentUpon>uSchoolYear.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uSchoolResources.resx">
+      <DependentUpon>uSchoolResources.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uSemester.resx">
+      <DependentUpon>uSemester.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uGradeTransferee.resx">
+      <DependentUpon>uGradeTransferee.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uStatementofAccount.resx">
+      <DependentUpon>uStatementofAccount.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uStatistics.resx">
+      <DependentUpon>uStatistics.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uStudentGrades.resx">
+      <DependentUpon>uStudentGrades.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\uStudentLedger.resx">
+      <DependentUpon>uStudentLedger.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uStudentPermanentRecord.resx">
+      <DependentUpon>uStudentPermanentRecord.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uStudentPermit.resx">
+      <DependentUpon>uStudentPermit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uStudents.resx">
+      <DependentUpon>uStudents.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uStudentSchedule.resx">
+      <DependentUpon>uStudentSchedule.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMenu\uStudentsReport.resx">
+      <DependentUpon>uStudentsReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\uSubjects.resx">
+      <DependentUpon>uSubjects.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uSummary.resx">
+      <DependentUpon>uSummary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\uSYOffering.resx">
+      <DependentUpon>uSYOffering.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uSyOfferingRep.resx">
+      <DependentUpon>uSyOfferingRep.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\uTeacherLoad.resx">
+      <DependentUpon>uTeacherLoad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uTeachers.resx">
+      <DependentUpon>uTeachers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uTOR.resx">
+      <DependentUpon>uTOR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uTRTypes.resx">
+      <DependentUpon>uTRTypes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\uTutorial.resx">
+      <DependentUpon>uTutorial.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uWhiteForm.resx">
+      <DependentUpon>uWhiteForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Datasets\dsFinance.xsc">
+      <DependentUpon>dsFinance.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsFinance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFinance.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\dsFinance.xss">
+      <DependentUpon>dsFinance.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsReg2.xsc">
+      <DependentUpon>dsReg2.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsReg2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReg2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\dsReg2.xss">
+      <DependentUpon>dsReg2.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsRegistrar.xsc">
+      <DependentUpon>dsRegistrar.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsRegistrar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRegistrar.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\dsRegistrar.xss">
+      <DependentUpon>dsRegistrar.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsRep.xsc">
+      <DependentUpon>dsRep.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsRep.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRep.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\dsRep.xss">
+      <DependentUpon>dsRep.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSchool.xsc">
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSchool.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSchool.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\dsSchool.xss">
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSchool2.xsc">
+      <DependentUpon>dsSchool2.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSchool2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSchool2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\dsSchool2.xss">
+      <DependentUpon>dsSchool2.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSystem.xsc">
+      <DependentUpon>dsSystem.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSystem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSystem.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\dsSystem.xss">
+      <DependentUpon>dsSystem.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GarciaFacade500pix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-gradient.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bar Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pie Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MMFCEnrollmentSystem_TemporaryKey.pfx" />
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CodeRepository.txt" />
+    <Content Include="Versions.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

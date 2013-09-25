@@ -1,0 +1,329 @@
+﻿=================================================================================================================
+2.20
+1. SY Offering Fused Subjects, increase to 10
+2. EVAL REPORT For Optometry, 2 yr courses, no summer no 3rd year... dont include those sections
+3. EVAL REPORT For Pharmacy, add 1 more row to 2nd year
+4. Subjects>Add a menu for checking of Fusing of this subject to an Offering .. or it is being offered
+5. Enrolment Subjects> allow editing of Year once subjects are enrolled
+6. Enrollment Subjects> NEW students will be turned to OLD , but check if student has duplicate records
+7. Student Selection > no more Balance computation to speed up loading.
+=================================================================================================================
+2.19
+Mailing grades,
+1.  no word Fused in subject
+2.  take out address
+3.  make sure Sem, year are not cut
+CLASS LIST
+1. Show the other resources used for the class
+PROMO LISt
+1. Recheck why Fused word is still showing
+STUDENT ROSTER
+1. Take out ID
+EVALUATION REPORT Curriculum
+1. Subject code is cut , increase width
+EVAL REPORT Grades
+1. Course missing, section head hsould start next page
+
+=================================================================================================================
+2.18
+Promo Report. Some students not showing up. 
+Encode Grades by offering, can save to db but after loading, some students have 0 grades
+uGradesSubjectTeacher.vb
+=================================================================================================================
+2.17
+Fix bug on White Form, String substring funciton  cls tool  
+=================================================================================================================
+2.16
+fix bug on conflict checking on broken hours when there are more than 2 records on the broken hours
+=================================================================================================================
+2.15
+Student Schedule Conflict check added
+Class Card (Pink Card format layout)
+=================================================================================================================
+2.14
+Formatted bottom margins and heights of Eval Reports both curriculum and plain eval
+
+=================================================================================================================
+
+2.13
+Eval Report:Curriculum based
+1. If grades in  5  or 9, dont show
+2. Decimal grades, jus show 10th decimal like 2.80 should show 2.8
+3. EVal Report plain grades : units are now non-decimal, total also non decimal
+4. Make the rows per Year be fixed so that all Printouts will have same height for each year
+  FIXED ROWS = 9 per year/sem
+=================================================================================================================
+2.12
+DONE >>> 1.Evaluation Report
+Requirements/ Credentials submitted
+FORM 138______________                    Certificates of Transfer Credentials_________
+FORM 137-A________________            TOR(EVALUATION)_________________
+PICTURES__________________             TOR(GRANTED)___________________
+BC(NSO)____________                            GOOD MORAL___________________
+Marriage Contract__________________    EXHIBIT FORM____________________
+                                                                                                (For Midwifery & Nursing Students Only_)
+
+2. REMARKS:
+*PASSED 
+*FAILED
+*DROPPED
+
+DONE >3. Size Evaluation : Long Bond paper
+DONE >4. Evaluated  by:____________
+    Date:________________
+
+DONE>5: Ang Unit Sir kay Isa lang ang Zero sir Dili Doble.....System ky 3.00 Dapat 3.0..Superceeded.. should be 3 only as of 3.2.2013
+
+6.Sir During Enrollement  days pag mag change ug schedule  ang teacher 
+pwede mo pop up pud kung kinsa ang srudyante maigo dili lang teacher ug rooms mo pop up 
+apil pud ang student nga conflict  d.i sya  ug e change ug daun ang schedule.
+
+
+=================================================================================================================
+2.11
+#1. Mailing Grades, remove FUSED word.. get from Fused Subject Curriculum
+uGradesMailingList
+#2 Promo Report, fused subjects get from curriculum
+#3 Enrolment list, fused subjects get from curriculum the subject code and desc
+#4 Student Reports, include 6th year in results, and add 6th year in combo box
+#5 Enable Year Level in Finalize Enrollment module
+#6 Dropped Subject still appearing in class list . Add condition of status = 1 before adding to class list.
+================================================================================================================
+2.10
+Bug Fixes
+#1 work on Eval Report . Bagamano eval report shows many subjects
+  Seems it was really enrolled into 2 SECTIONS (1828,1830 )
+  so workaround here is if a student has a subjectpk already listed for the sem, dont show a succeeding occurence
+   
+  Bagamano got enrolled to Histology 2 SYoffering, with both having same fused subject which is only 1 subjectpk = 730
+  Histology SYOFFERINGS for 2011-2012, 1st Sem, syofferpks 1833 -Lec, 1834 - Lab, used 1 and same Subject PK in fused
+  WORKAROUND: 
+  - will create new FusedRecord for 1834, use the histology - lab for this .. which is subjectpk = 660
+  BUT many students enrolled to these 2 syofferings, 1833 and 1834. both having subjects 322 and 660. 
+  ===>SO THEREFORE, MODIFY the Syofferfusedsubjects records for both 1833 and 1834, modifying the subjectpk to be 322 and 660 instead of the old 730
+    
+#2. Almadin Curriculum Eval Report showing many subjects in First Semester.. 
+  BUG! 6th year is being added as 1st year!
+  modify code
+  
+#3. ADDED an INFO ALERT in Fused Subjects configuration on what a fused subject is for`
+
+================================================================================================================
+2.09
+- add Evaluated By in Evaluation Report
+- add Course in Evaluation Report
+- fixed 5th year grade curriculum showing in Eval Curriculum Report
+================================================================================================================
+2.08
+- fixed bug on Edit Mode of Mapping! you cant add a 3rd mapped subject on edit mode
+- add 2 more buttons for Mapped/Fused Subjects
+================================================================================================================
+2.07
+
+- Allowed previous YEAR , SY Offering Loading 
+================================================================================================================
+2.06
+- allowed CAPS in subjects editing and creation
+================================================================================================================
+2.05
+- modification of Curriculum Based Eval Report. showing of Fused Subject Mapped Subject
+2.04
+ - modification of Eval Report
+2.03
+- Map Evaluation Report Fused Subjects to the curriculum exact subject
+2.02
+- Grades Mailing Report - placed Failed remarks and format 5 into 5.0 as grade
+- Reports > Instructors Load Listing > placed Signatories at the bottom part
+- Evaluation Report Changes , removed teacher column, box type columns,colored headers?
+- Evaluation Report, Curriculum type , format changes
+2.01
+- Teachers Load, increased Days width
+- COMMENT OUT FOR NOW run Autoset student type to OLD via button
+- Student Ledger checking for Ledger records with ZERO values, causes duplication
+- Student Ledger checking for duplicate courses charges... get the most recent from EnrollSubjects table (which has the coursepk)
+- Student Ledger > clstool.getcoursetuition > use getTuitionbySemStudentSypk instead of the old getCourseTuition
+- Finance > Requested Subject Tutorial Final Assessment > sort alphabetically
+- Finance > Requested Subject Tutorial Final Assessment > add filter to show only those related to adjustments
+- Finance > Requested Subject Tutorial Final Assessment > 
+	disable Apply Charges??? since this is no use? it only adds records to ledger
+    Student Ledger uses the EnrollSubjectsCost records for REQUESTED not ledger table
+- add SY option in Teachers Load
+
+- TUTOR charges caused by Finance>Tutorial Final Assessment is causing Double Charges!! 
+
+
+1.35
+- decreased with of total columns in Enrollment List and Promotional Report
+1.34
+- Conflict checking in Enrollment. clstool checkforconflicts. Modified checking for brokenhours
+
+- FUSED Subjects in one SY Offer, get student's curriculum reference subject name.
+1.33
+- class card, put an order/sorting number
+1.32
+- LEDGER , put #of units x Tuition Rate
+- LEDGER , MISC TOTAL not consistent 
+(COMMUNITY EXTENSION is being added to miscellaneous in ledger rows shouldnt be. Misc box is ok )
+- Evaluation Report, group it by Semesters
+- Transferee Grades Mapping , Allow ZERO grade for Mapped/Credited.. since we will show the previous school
+grade anyway
+
+- SPR, bottom part is still not printing, move it up, LEGAL size paper format
+
+
+1.31
+- Promo/Enroll List , put page number in the center
+- SPR , don't repeat school names if its the same for the next sem
+- SPR , Adjust the page since its only printing until remarks part
+- Student LEdger, Subreport, Misc Charges 2 columns, put TOTAL
+- Evaluation Report, include all semesters
+
+1.30
+- Promo Report/Enrollment List, printable as is
+- Enrollment List copied from Promo Report... 
+ 20 records per page
+
+-SPR , Student Permanent Record (old)
+- Evaluation Report (old)
+
+
+1.29 
+- Auto set of Credit Group in Mapping Grades and Student Grades
+- Promo Report/Enrollment List , option not to  include optometry and dental students 
+- 2nd courser will have * before name in promo and enrollment list
+
+1.28
+- Promo Report. fixed error conversion of Non Number to Int, export to excel corrected format , fit to 2 rows
+
+
+1.27
+Modified following
+- Mailing Grades
+- Class Card
+- took out remarks on Student LEdger
+- Enrollment Statistics MAtrix type
+
+1.26
+- Mailing Grades new Format
+- TOR new format
+
+1.25
+- fix bug on encode student grades, student name which increments and not reinitializes
+- Student Grade , Student Grade Mapping, allow zero grade, zero unit
+- modify Class Card print out.. lengthen Subjects...narrow down day time based on new format
+- Student Ledger Report all boxes...
+- Teachers Load Bug fix..
+ a. dont include deleted SYOffering
+ b. show extra hours in box at bottom, M 7-9, W 7-10
+
+
+1.24
+- SYOffering Delete, logical only
+- Modify Tutorial Subjects Module. Only Requested Tutorial Subjects should load
+- isDeleted field in SYOFfering
+
+1.23
+- Final Assessment Module (for Requested Subject falling under Tutorial)
+- Broken Hours checking for conflict
+- Teachers Load, put Class Type correctly (Special Tutorials should be T already)
+- Student Ledger , moved the column Headers below Misc SubReport
+
+1.22
+- Modified Tutorial Subject Classification.
+Tutorial 1 : Regular Offered Subjects where enrolled count fall below minimum required students
+           This can only be finalized when enrollment is closed
+
+Tutorial 2 : Non Offered Subject, 1 or 2 student special arrangement with teacher, payment goes straight
+           to teacher (although still under cashier system) but this does not appear in student ledger. 
+
+- Requested Subject Division of Charges
+
+- Sorted grid by Requested or Not bit field
+
+Requested Subject that falls below minimum required. Divide balance among enrolled students. Only happens
+after enrollment is closed. Should be paid on 1st exam.
+
+- Resource Load, add broken hours
+
+- Form Wait in SYOffering Multiple opening
+
+- Student Ledger . Breakdown of Other Subject Charges
+    
+    
+    
+           
+1.21
+- Tutorial Subjects , before Adjusting, open first a form to show the students enrolled under that subject
+- Student Ledger , placed Misc Details on top, so that ledger rows will be below, updates will go with these
+ledger rows also...
+
+1.20
+> cleaned db, the frmSYOffering copy module of monday sked also copied the date 2/5/2007, which should not be the case
+> Student Reports, placed Student Types, populated it
+
+1.19
+- Fused Subjects, show Course's description in WhiteForm, ClassCard etc WhiteForm???
+>>> this depends on how the configuration is done
+
+- Class Card - put Subject Name only, no code and not full desc
+
+- Lab Charges for Fused Subjects should also reflect in Finalize Enrolment
+
+- Broken hours should appear in White Form/Pink Card
+
+- Error overlimit string in Resource Load Report
+
+
+1.18
+- set NSTP tuitions units back to half or 1.5
+- added items Receipt Items/Particulars
+- added CASH IN, CHANGE popout to Receipts/Cashier
+- Class Card > add nothing follows at the bottom
+- Enrollment CHecking of Grades, dont check for Prereq grades when there are no prereqs
+- Resource Load Created/Copied from old
+
+1.17
+- BACK ACCOUNTS. Only cover 2nd Sem 2011-2012 SY.Backaccounts previous semesters will not be computed
+anymore
+- BACK ACCOUNTS , Adjustments, Checkbox changed to BackAccount Record. This is to include this adjustment
+amount as a backaccount record and not another type of adjustment
+- Student Ledger has misc records printed in 2 columns
+
+1.16
+- added RegistrationNumbers table
+- added functionality to create Registration Number in Cashier Module, link to White Form
+- BACK ACCOUNT. Adjustments > added checkbox 'To Clear Back Accounts' , to distinguish this as a record
+to be added to the backaccount computation. Current back account computation only computes previous 
+semesters. But an adjustment can be done in current sem, so allow for this to be included.
+- DB. added IsBackAccountClearing field (bit) to tbl Ledgers.
+
+-Student Ledger Report 
+a. Make 2 columns for the MISC charges just like White Form (NOT YET DONE)
+b. Make option to print only updates after a certain date
+
+1.15
+-  modified COnflict checking in SY OFfering. will allow continuation even with conflict.
+ note: the code to check conflicts was commented out?? why? maybe because to allow users to encode offerings with conflict?
+ 
+- sy offering, modified Keyword search, search also on teacher name, subject code, sked
+- teacher load fixed bug of teacher name not showing
+
+
+1.14
+- Teachers Load Extra Hours Subreport inside Teachers Load Report
+- SYOffering, Broken Hours, Delete Broken Hours button
+- Fusing of Subjects in SY OFfering. allow up to 4 mapped subjects.
+
+1.13
+- added Ex Units in Transferee Grades
+- added Completion Grades in Grid View for Transferee Grades
+- Transferee Grades > Added 0 in Credit Group for those with no Credit Groups
+- SY Offering > added saving of broken hours in edit mode
+- Lab charges based on Curriculum year level and not the student's year level
+- added RLE units to differentiate from LAB
+- White Form NCM Subject Units will be totaled as Tuition Units + RLE units
+
+
+1.12
+- hard coded NCM subjects under CMO #14 to have different Units for tuition charging
+- Enroll Subjects. On change of course, update the Enrolled Subjects course field.
